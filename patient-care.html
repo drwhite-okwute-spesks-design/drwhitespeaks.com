@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Patient Care | DRWHITE UGBEDEOJO CLINIC</title>
+
+    <style>
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#f5fbfb;
+            color:#183b3d;
+            line-height:1.6;
+        }
+
+        header{
+            background:#087f81;
+            color:white;
+            padding:18px 20px;
+        }
+
+        .header-inner{
+            max-width:1100px;
+            margin:auto;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:15px;
+        }
+
+        .logo-area{
+            display:flex;
+            align-items:center;
+            gap:12px;
+        }
+
+        .logo{
+            width:48px;
+            height:48px;
+            border-radius:50%;
+            background:white;
+            color:#087f81;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:25px;
+            font-weight:bold;
+        }
+
+        .clinic-name{
+            font-size:20px;
+            font-weight:bold;
+        }
+
+        .subtitle{
+            font-size:12px;
+            opacity:.9;
+        }
+
+        .call-top{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .hero{
+            background:linear-gradient(135deg,#087f81,#0b9c9e);
+            color:white;
+            text-align:center;
+            padding:65px 20px;
+        }
+
+        .hero-icon{
+            font-size:55px;
+            margin-bottom:12px;
+        }
+
+        .hero h1{
+            font-size:40px;
+            margin-bottom:12px;
+        }
+
+        .hero p{
+            max-width:700px;
+            margin:auto;
+            font-size:18px;
+            opacity:.95;
+        }
+
+        .container{
+            max-width:1100px;
+            margin:auto;
+            padding:45px 20px;
+        }
+
+        .intro{
+            text-align:center;
+            max-width:800px;
+            margin:0 auto 35px;
+        }
+
+        .intro h2{
+            color:#087f81;
+            font-size:30px;
+            margin-bottom:10px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:22px;
+        }
+
+        .card{
+            background:white;
+            padding:28px 22px;
+            border-radius:15px;
+            box-shadow:0 5px 18px rgba(0,0,0,.08);
+            border-top:4px solid #087f81;
+        }
+
+        .card-icon{
+            font-size:38px;
+            margin-bottom:12px;
+        }
+
+        .card h3{
+            color:#087f81;
+            margin-bottom:8px;
+            font-size:20px;
+        }
+
+        .care-section{
+            background:white;
+            margin-top:40px;
+            padding:35px 25px;
+            border-radius:16px;
+            box-shadow:0 5px 18px rgba(0,0,0,.06);
+        }
+
+        .care-section h2{
+            color:#087f81;
+            margin-bottom:18px;
+        }
+
+        .care-list{
+            list-style:none;
+        }
+
+        .care-list li{
+            padding:13px 0;
+            border-bottom:1px solid #e5eeee;
+        }
+
+        .care-list li:last-child{
+            border-bottom:none;
+        }
+
+        .care-list strong{
+            color:#087f81;
+        }
+
+        .notice{
+            background:#eefafa;
+            border-left:5px solid #087f81;
+            padding:20px;
+            margin-top:30px;
+            border-radius:8px;
+        }
+
+        .buttons{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:15px;
+            margin-top:35px;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:14px 24px;
+            border-radius:8px;
+            text-decoration:none;
+            font-weight:bold;
+            transition:.2s;
+        }
+
+        .btn-call{
+            background:#087f81;
+            color:white;
+        }
+
+        .btn-whatsapp{
+            background:#159447;
+            color:white;
+        }
+
+        .btn-back{
+            background:#e7eeee;
+            color:#183b3d;
+        }
+
+        .btn:hover{
+            transform:translateY(-2px);
+        }
+
+        footer{
+            background:#073f40;
+            color:white;
+            text-align:center;
+            padding:28px 20px;
+            margin-top:30px;
+        }
+
+        footer p{
+            margin:5px 0;
+            font-size:14px;
+        }
+
+        @media(max-width:800px){
+
+            .header-inner{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .hero h1{
+                font-size:31px;
+            }
+
+            .hero p{
+                font-size:16px;
+            }
+
+            .cards{
+                grid-template-columns:1fr;
+            }
+
+            .clinic-name{
+                font-size:18px;
+            }
+
+            .call-top{
+                font-size:14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+
+        <div class="logo-area">
+            <div class="logo">✚</div>
+
+            <div>
+                <div class="clinic-name">
+                    DRWHITE UGBEDEOJO CLINIC
+                </div>
+
+                <div class="subtitle">
+                    Quality Healthcare You Can Trust
+                </div>
+            </div>
+        </div>
+
+        <a href="tel:+2348038109970" class="call-top">
+            📞 +234 803 810 9970
+        </a>
+
+    </div>
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-icon">❤️‍🩹</div>
+
+    <h1>Patient Care</h1>
+
+    <p>
+        Your comfort, safety and wellbeing are important to us.
+        We are committed to providing respectful and compassionate
+        healthcare for every patient.
+    </p>
+
+</section>
+
+
+<main class="container">
+
+    <div class="intro">
+
+        <h2>Our Commitment to You</h2>
+
+        <p>
+            At DRWHITE UGBEDEOJO CLINIC, we believe that good healthcare
+            goes beyond treatment. We aim to listen to our patients,
+            provide clear information and support them throughout their
+            healthcare journey.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">❤️</div>
+
+            <h3>Compassionate Care</h3>
+
+            <p>
+                We treat our patients with kindness, dignity and respect
+                while paying attention to their individual needs.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="card-icon">🛡️</div>
+
+            <h3>Patient Safety</h3>
+
+            <p>
+                We place patient safety at the heart of the care we
+                provide and encourage patients to ask questions about
+                their care.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="card-icon">🤝</div>
+
+            <h3>Trust & Communication</h3>
+
+            <p>
+                We believe open communication helps patients understand
+                their healthcare and make informed decisions.
+            </p>
+        </div>
+
+    </div>
+
+
+    <section class="care-section">
+
+        <h2>What Patients Can Expect</h2>
+
+        <ul class="care-list">
+
+            <li>
+                <strong>✓ Respect:</strong>
+                Every patient should be treated with dignity and courtesy.
+            </li>
+
+            <li>
+                <strong>✓ Clear Communication:</strong>
+                We encourage patients to communicate their concerns and
+                ask questions about their care.
+            </li>
+
+            <li>
+                <strong>✓ Professional Care:</strong>
+                Healthcare needs are assessed and managed according to
+                the patient's individual situation.
+            </li>
+
+            <li>
+                <strong>✓ Privacy:</strong>
+                Patient information should be handled with appropriate
+                confidentiality.
+            </li>
+
+            <li>
+                <strong>✓ Support:</strong>
+                Patients can contact the clinic when they need information
+                about their care or appointment.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <section class="care-section">
+
+        <h2>Before Your Visit</h2>
+
+        <ul class="care-list">
+
+            <li>
+                ✓ Have your relevant medical information available.
+            </li>
+
+            <li>
+                ✓ Bring any documents or previous medical information
+                that may be useful.
+            </li>
+
+            <li>
+                ✓ Tell the healthcare professional about important
+                symptoms or concerns.
+            </li>
+
+            <li>
+                ✓ Feel free to ask questions if you do not understand
+                something about your care.
+            </li>
+
+        </ul>
+
+        <div class="notice">
+            <strong>Important:</strong>
+            Information on this website is for general guidance and does
+            not replace professional medical assessment or treatment.
+            For urgent or life-threatening situations, seek emergency
+            medical assistance immediately.
+        </div>
+
+    </section>
+
+
+    <div class="buttons">
+
+        <a href="tel:+2348038109970" class="btn btn-call">
+            📞 Call Clinic
+        </a>
+
+        <a
+            href="https://wa.me/2348038109970"
+            class="btn btn-whatsapp"
+            target="_blank"
+            rel="noopener">
+            💬 WhatsApp Clinic
+        </a>
+
+        <a href="index.html" class="btn btn-back">
+            ← Back to Clinic Website
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <p><strong>DRWHITE UGBEDEOJO CLINIC</strong></p>
+
+    <p>Quality Healthcare You Can Trust</p>
+
+    <p>
+        📞 +234 803 810 9970
+    </p>
+
+    <p>
+        © 2026 DRWHITE UGBEDEOJO CLINIC. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
