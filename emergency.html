@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Emergency Care - DRWHITE UGBEDEOJO CLINIC</title>
+
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5fafa;
+    color:#263238;
+    line-height:1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+
+    background:#063f40;
+
+    color:white;
+
+    padding:18px 6%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo-icon{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#0b8f91;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
+
+}
+
+.logo h1{
+
+    font-size:19px;
+
+}
+
+.logo p{
+
+    font-size:11px;
+
+    opacity:.8;
+
+}
+
+
+/* =========================
+   EMERGENCY HERO
+========================= */
+
+.emergency-hero{
+
+    background:#c62828;
+
+    color:white;
+
+    text-align:center;
+
+    padding:65px 6%;
+
+}
+
+.emergency-icon{
+
+    font-size:60px;
+
+    margin-bottom:15px;
+
+}
+
+.emergency-hero h2{
+
+    font-size:40px;
+
+    margin-bottom:12px;
+
+}
+
+.emergency-hero p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:17px;
+
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.container{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:55px 6%;
+
+}
+
+.notice{
+
+    background:white;
+
+    padding:28px;
+
+    border-radius:12px;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.08);
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+}
+
+.notice h3{
+
+    color:#c62828;
+
+    margin-bottom:12px;
+
+    font-size:24px;
+
+}
+
+.notice p{
+
+    color:#555;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.action-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin:25px 0;
+
+}
+
+
+.call-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#0b8f91;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 25px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    font-size:16px;
+
+    min-width:190px;
+
+}
+
+
+.whatsapp-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#25d366;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 25px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    font-size:16px;
+
+    min-width:190px;
+
+}
+
+
+.call-btn:hover,
+.whatsapp-btn:hover{
+
+    opacity:.9;
+
+}
+
+
+/* =========================
+   INFORMATION CARDS
+========================= */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+
+    margin-top:30px;
+
+}
+
+.info-card{
+
+    background:white;
+
+    padding:25px 20px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.06);
+
+}
+
+.info-card .icon{
+
+    font-size:35px;
+
+    margin-bottom:10px;
+
+}
+
+.info-card h3{
+
+    color:#063f40;
+
+    margin-bottom:8px;
+
+}
+
+.info-card p{
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+
+/* =========================
+   IMPORTANT NOTICE
+========================= */
+
+.important{
+
+    background:#fff3f3;
+
+    border-left:
+        5px solid #c62828;
+
+    padding:22px;
+
+    margin-top:30px;
+
+    border-radius:8px;
+
+}
+
+.important h3{
+
+    color:#c62828;
+
+    margin-bottom:8px;
+
+}
+
+.important p{
+
+    color:#555;
+
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-btn{
+
+    display:block;
+
+    width:max-content;
+
+    margin:35px auto 0;
+
+    background:#063f40;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:13px 24px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#032b2c;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px 6%;
+
+    font-size:14px;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    header{
+
+        padding:15px 5%;
+
+    }
+
+    .logo h1{
+
+        font-size:16px;
+
+    }
+
+    .logo p{
+
+        font-size:10px;
+
+    }
+
+    .logo-icon{
+
+        width:40px;
+
+        height:40px;
+
+        font-size:21px;
+
+    }
+
+    .emergency-hero{
+
+        padding:50px 5%;
+
+    }
+
+    .emergency-icon{
+
+        font-size:50px;
+
+    }
+
+    .emergency-hero h2{
+
+        font-size:32px;
+
+    }
+
+    .emergency-hero p{
+
+        font-size:15px;
+
+    }
+
+    .container{
+
+        padding:40px 5%;
+
+    }
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .action-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .call-btn,
+    .whatsapp-btn{
+
+        width:100%;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            ✚
+        </div>
+
+
+        <div>
+
+            <h1>
+                DRWHITE UGBEDEOJO CLINIC
+            </h1>
+
+            <p>
+                Professional Healthcare Services
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     EMERGENCY HERO
+========================= -->
+
+<section class="emergency-hero">
+
+    <div class="emergency-icon">
+        🚑
+    </div>
+
+
+    <h2>
+        Emergency Care
+    </h2>
+
+
+    <p>
+        If you need urgent medical attention,
+        please contact the clinic directly.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<main class="container">
+
+
+    <div class="notice">
+
+        <h3>
+            Need Urgent Medical Attention?
+        </h3>
+
+
+        <p>
+            For urgent medical concerns, contact
+            DRWHITE UGBEDEOJO CLINIC directly
+            using the phone or WhatsApp options below.
+        </p>
+
+
+
+        <!-- ACTION BUTTONS -->
+
+        <div class="action-buttons">
+
+
+            <!-- CALL CLINIC -->
+
+            <a
+                href="tel:+2348038109970"
+                class="call-btn">
+
+                📞 Call Clinic
+
+            </a>
+
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                href="https://wa.me/2348038109970"
+                class="whatsapp-btn"
+                target="_blank"
+                rel="noopener">
+
+                💬 WhatsApp Clinic
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         INFORMATION
+    ========================= -->
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+            <div class="icon">
+                📞
+            </div>
+
+            <h3>
+                Call
+            </h3>
+
+            <p>
+                +234 803 810 9970
+            </p>
+
+        </div>
+
+
+
+        <div class="info-card">
+
+            <div class="icon">
+                💬
+            </div>
+
+            <h3>
+                WhatsApp
+            </h3>
+
+            <p>
+                Contact the clinic directly.
+            </p>
+
+        </div>
+
+
+
+        <div class="info-card">
+
+            <div class="icon">
+                🏥
+            </div>
+
+            <h3>
+                Clinic
+            </h3>
+
+            <p>
+                DRWHITE UGBEDEOJO CLINIC
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         IMPORTANT
+    ========================= -->
+
+    <div class="important">
+
+        <h3>
+            Important Information
+        </h3>
+
+
+        <p>
+            This website does not replace professional
+            medical assessment or emergency services.
+            If a situation is life-threatening, seek
+            emergency medical assistance immediately.
+        </p>
+
+    </div>
+
+
+
+    <!-- BACK TO WEBSITE -->
+
+    <a
+        href="index.html"
+        class="back-btn">
+
+        ← Back to Clinic Website
+
+    </a>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 DRWHITE UGBEDEOJO CLINIC.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
