@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DRWHITE UGBEDEOJO CLINIC | Quality Healthcare</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5fbfa;
+      color: #173b3a;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      background: #063f3c;
+      color: white;
+      padding: 9px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .topbar a {
+      color: white;
+      font-weight: bold;
+    }
+
+    /* HEADER */
+    header {
+      background: white;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 55px;
+      height: 55px;
+      background: #087f78;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .brand h1 {
+      color: #087f78;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .brand span {
+      display: block;
+      color: #647876;
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    /* MENU BUTTON */
+    .menu-btn {
+      background: #087f78;
+      border: none;
+      color: white;
+      font-size: 25px;
+      width: 46px;
+      height: 42px;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+
+    /* NAVIGATION */
+    nav {
+      display: none;
+      background: white;
+      position: absolute;
+      top: 87px;
+      right: 15px;
+      width: 245px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      border-radius: 10px;
+      overflow: hidden;
+      z-index: 999;
+    }
+
+    nav.active {
+      display: block;
+    }
+
+    nav a {
+      display: block;
+      padding: 14px 18px;
+      color: #173b3a;
+      border-bottom: 1px solid #edf2f1;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: #e8f7f5;
+      color: #087f78;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 540px;
+      background:
+        linear-gradient(rgba(0, 70, 66, 0.76), rgba(0, 70, 66, 0.76)),
+        url("https://i.ibb.co/8gDMkSsb/IMG-20260826-WA0138.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 70px 20px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h2 {
+      font-size: 43px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 650px;
+      margin: 0 auto 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .primary-btn {
+      background: white;
+      color: #087f78;
+    }
+
+    .call-btn {
+      background: #25d366;
+      color: white;
+    }
+
+    /* TRUST CARDS */
+    .trust {
+      max-width: 1100px;
+      margin: -45px auto 0;
+      position: relative;
+      z-index: 5;
+      padding: 0 20px;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .trust-card {
+      background: white;
+      padding: 25px 18px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.09);
+    }
+
+    .trust-card .icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .trust-card h3 {
+      color: #087f78;
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    .trust-card p {
+      color: #687c7a;
+      font-size: 13px;
+    }
+
+    /* SECTIONS */
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 75px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      color: #087f78;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      max-width: 700px;
+      margin: auto;
+      color: #687c7a;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 13px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+      text-align: center;
+      border-top: 4px solid #087f78;
+    }
+
+    .service-card .service-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      color: #087f78;
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .service-card p {
+      color: #687c7a;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .service-link {
+      color: #087f78;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    /* ABOUT */
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      max-width: 1100px;
+      margin: auto;
+      padding: 75px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    .about-content h2 {
+      color: #087f78;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .about-content p {
+      color: #687c7a;
+      margin-bottom: 15px;
+    }
+
+    /* WHY CHOOSE US */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .why-card {
+      background: white;
+      padding: 28px 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+    }
+
+    .why-card h3 {
+      color: #087f78;
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      color: #687c7a;
+      font-size: 14px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      background: white;
+    }
+
+    .gallery-grid {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 12px;
+      height: 210px;
+      background: #e8f7f5;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .center-btn {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .outline-btn {
+      display: inline-block;
+      border: 2px solid #087f78;
+      color: #087f78;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    /* TEAM */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .team-card {
+      background: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 13px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+      border-top: 4px solid #087f78;
+    }
+
+    .team-icon {
+      width: 85px;
+      height: 85px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: #e2f4f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+
+    .team-card h3 {
+      color: #087f78;
+      margin-bottom: 5px;
+    }
+
+    .team-card .role {
+      font-weight: bold;
+      color: #444;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .team-card p {
+      color: #687c7a;
+      font-size: 13px;
+    }
+
+    /* PATIENT CARE */
+    .patient-care {
+      background: #e8f7f5;
+    }
+
+    .patient-box {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .patient-box h2 {
+      color: #087f78;
+      margin-bottom: 12px;
+    }
+
+    .patient-box p {
+      color: #687c7a;
+      margin-bottom: 20px;
+    }
+
+    /* FAQ */
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-item {
+      background: white;
+      margin-bottom: 12px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    }
+
+    .faq-item h3 {
+      color: #087f78;
+      margin-bottom: 7px;
+      font-size: 17px;
+    }
+
+    .faq-item p {
+      color: #687c7a;
+      font-size: 14px;
+    }
+
+    /* APPOINTMENT */
+    .appointment {
+      background: white;
+    }
+
+    .appointment-box {
+      max-width: 750px;
+      margin: auto;
+      background: #f5fbfa;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .appointment-box h2 {
+      text-align: center;
+      color: #087f78;
+      margin-bottom: 10px;
+    }
+
+    .appointment-box > p {
+      text-align: center;
+      color: #687c7a;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccd9d7;
+      border-radius: 7px;
+      font-size: 14px;
+      font-family: inherit;
+      background: white;
+    }
+
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      border: none;
+      background: #087f78;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: #087f78;
+      color: white;
+      text-align: center;
+      padding: 65px 20px;
+    }
+
+    .contact h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .contact p {
+      margin-bottom: 25px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .whatsapp-btn {
+      background: #25d366;
+      color: white;
+    }
+
+    .white-btn {
+      background: white;
+      color: #087f78;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #063f3c;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      font-size: 13px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    /* FLOATING WHATSAPP */
+    .floating-whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 56px;
+      height: 56px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.2);
+      z-index: 2000;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .topbar {
+        flex-direction: column;
+        gap: 3px;
+        text-align: center;
+      }
+
+      .brand h1 {
+        font-size: 16px;
+      }
+
+      .brand span {
+        font-size: 10px;
+      }
+
+      .logo {
+        width: 48px;
+        height: 48px;
+        font-size: 25px;
+      }
+
+      nav {
+        top: 78px;
+        right: 10px;
+        width: calc(100% - 20px);
+      }
+
+      .hero {
+        min-height: 500px;
+      }
+
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust {
+        margin-top: 20px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        padding: 55px 20px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gallery-item {
+        height: 170px;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 55px 15px;
+      }
+
+      .section-title h2 {
+        font-size: 27px;
+      }
+
+      .appointment-box {
+        padding: 25px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>Quality Healthcare You Can Trust</span>
+    <a href="tel:+2348038109970">📞 +234 803 810 9970</a>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="brand">
+      <div class="logo">✚</div>
+
+      <div>
+        <h1>DRWHITE UGBEDEOJO CLINIC</h1>
+        <span>Professional Healthcare • Compassionate Service</span>
+      </div>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="mainNav">
+
+      <a href="index.html">Home</a>
+
+      <a href="#services">Services</a>
+
+      <a href="emergency.html">🚑 Emergency Care</a>
+
+      <a href="#about">About Us</a>
+
+      <a href="gallery.html">Gallery</a>
+
+      <a href="team.html">Our Team</a>
+
+      <a href="patient-care.html">Patient Care</a>
+
+      <a href="#faq">FAQ</a>
+
+      <a href="#appointment">Appointment</a>
+
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h2>Your Health Is Our Priority</h2>
+
+      <p>
+        Welcome to DRWHITE UGBEDEOJO CLINIC, where we are committed to
+        providing professional, compassionate and patient-focused healthcare.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#appointment" class="btn primary-btn">
+          📅 Book an Appointment
+        </a>
+
+        <a href="tel:+2348038109970" class="btn call-btn">
+          📞 Call Clinic
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TRUST -->
+  <section class="trust">
+
+    <div class="trust-grid">
+
+      <div class="trust-card">
+        <div class="icon">❤️</div>
+        <h3>Patient First</h3>
+        <p>Your wellbeing is at the heart of our care.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="icon">🩺</div>
+        <h3>Professional Care</h3>
+        <p>Committed to quality healthcare services.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="icon">🤝</div>
+        <h3>Compassionate Service</h3>
+        <p>Respect, dignity and care for every patient.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+
+    <div class="section-title">
+
+      <h2>Our Services</h2>
+
+      <p>
+        We provide healthcare services designed to support your health
+        and wellbeing.
+      </p>
+
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+
+        <div class="service-icon">🩺</div>
+
+        <h3>General Consultation</h3>
+
+        <p>
+          Professional medical consultation and assessment for your
+          healthcare needs.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">🔬</div>
+
+        <h3>Laboratory Services</h3>
+
+        <p>
+          Laboratory support to assist healthcare professionals in
+          patient assessment.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">💊</div>
+
+        <h3>Pharmacy</h3>
+
+        <p>
+          Access to prescribed medications and pharmacy support where available.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">🚑</div>
+
+        <h3>Emergency Care</h3>
+
+        <p>
+          Information and guidance for patients who require urgent
+          medical attention.
+        </p>
+
+        <a href="emergency.html" class="service-link">
+          Learn More →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div class="about-grid">
+
+      <div>
+
+        <img
+          src="https://i.ibb.co/8gDMkSsb/IMG-20260826-WA0138.jpg"
+          alt="DRWHITE UGBEDEOJO CLINIC"
+          class="about-image"
+        >
+
+      </div>
+
+
+      <div class="about-content">
+
+        <h2>About Our Clinic</h2>
+
+        <p>
+          DRWHITE UGBEDEOJO CLINIC is committed to providing quality
+          healthcare in a professional and caring environment.
+        </p>
+
+        <p>
+          We believe that every patient deserves to be treated with
+          respect, compassion and dignity.
+        </p>
+
+        <p>
+          Our goal is to support patients with healthcare services
+          while creating a comfortable and trustworthy clinic experience.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY CHOOSE US -->
+  <section class="section">
+
+    <div class="section-title">
+
+      <h2>Why Choose Us?</h2>
+
+      <p>
+        We focus on delivering a healthcare experience built around
+        professionalism, respect and patient care.
+      </p>
+
+    </div>
+
+
+    <div class="why-grid">
+
+      <div class="why-card">
+
+        <h3>❤️ Patient-Centred Care</h3>
+
+        <p>
+          We place the needs, comfort and wellbeing of patients at
+          the centre of our service.
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <h3>🩺 Professional Approach</h3>
+
+        <p>
+          We are committed to maintaining a professional approach
+          to healthcare and patient service.
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <h3>🤝 Respect & Compassion</h3>
+
+        <p>
+          Every patient deserves to be listened to and treated
+          with dignity and respect.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GALLERY -->
+  <section class="gallery section">
+
+    <div class="section-title">
+
+      <h2>Gallery</h2>
+
+      <p>
+        A look at DRWHITE UGBEDEOJO CLINIC.
+      </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <img
+          src="https://i.ibb.co/8gDMkSsb/IMG-20260826-WA0138.jpg"
+          alt="DRWHITE UGBEDEOJO CLINIC"
+        >
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://i.ibb.co/8gDMkSsb/IMG-20260826-WA0138.jpg"
+          alt="Clinic"
+        >
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://i.ibb.co/8gDMkSsb/IMG-20260826-WA0138.jpg"
+          alt="Healthcare"
+        >
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://i.ibb.co/8gDMkSsb/IMG-20260826-WA0138.jpg"
+          alt="Clinic Environment"
+        >
+      </div>
+
+    </div>
+
+
+    <div class="center-btn">
+
+      <a href="gallery.html" class="outline-btn">
+        View Full Gallery →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- OUR TEAM -->
+  <section class="section">
+
+    <div class="section-title">
+
+      <h2>Our Team</h2>
+
+      <p>
+        Meet the people dedicated to supporting quality patient care.
+      </p>
+
+    </div>
+
+
+    <div class="team-grid">
+
+      <div class="team-card">
+
+        <div class="team-icon">👨‍⚕️</div>
+
+        <h3>Dr. White Ugbedeojo</h3>
+
+        <div class="role">Medical Doctor</div>
+
+        <p>
+          Providing professional medical care and attention to patients.
+        </p>
+
+      </div>
+
+
+      <div class="team-card">
+
+        <div class="team-icon">👩‍⚕️</div>
+
+        <h3>Healthcare Team</h3>
+
+        <div class="role">Healthcare Professionals</div>
+
+        <p>
+          Supporting patients and contributing to quality healthcare delivery.
+        </p>
+
+      </div>
+
+
+      <div class="team-card">
+
+        <div class="team-icon">🤝</div>
+
+        <h3>Clinic Support Team</h3>
+
+        <div class="role">Patient Support</div>
+
+        <p>
+          Helping patients have a respectful and comfortable clinic experience.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="center-btn">
+
+      <a href="team.html" class="outline-btn">
+        Meet Our Full Team →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PATIENT CARE -->
+  <section class="patient-care">
+
+    <div class="section">
+
+      <div class="patient-box">
+
+        <h2>Patient Care</h2>
+
+        <p>
+          Your comfort, safety and wellbeing matter to us. Learn more
+          about what patients can expect when visiting our clinic.
+        </p>
+
+        <a href="patient-care.html" class="outline-btn">
+          Learn About Patient Care →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+
+    <div class="section-title">
+
+      <h2>Frequently Asked Questions</h2>
+
+      <p>
+        Some common questions about our clinic.
+      </p>
+
+    </div>
+
+
+    <div class="faq">
+
+      <div class="faq-item">
+
+        <h3>How can I contact the clinic?</h3>
+
+        <p>
+          You can call the clinic directly on +234 803 810 9970
+          or contact the clinic through WhatsApp.
+        </p>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <h3>Can I book an appointment online?</h3>
+
+        <p>
+          Yes. You can use the appointment section on this website
+          to send an appointment request through WhatsApp.
+        </p>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <h3>What should I do in a medical emergency?</h3>
+
+        <p>
+          If you believe you are experiencing a life-threatening
+          emergency, seek emergency medical assistance immediately.
+        </p>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <h3>Can I speak with the clinic before visiting?</h3>
+
+        <p>
+          Yes. You can call the clinic or send a WhatsApp message
+          before your visit.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- APPOINTMENT -->
+  <section class="appointment section" id="appointment">
+
+    <div class="appointment-box">
+
+      <h2>Book an Appointment</h2>
+
+      <p>
+        Fill in your details below and your request will be sent
+        through WhatsApp.
+      </p>
+
+
+      <form onsubmit="sendAppointment(event)">
+
+        <div class="form-group">
+
+          <label for="name">Full Name</label>
+
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your full name"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="phone">Phone Number</label>
+
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Enter your phone number"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="date">Preferred Date</label>
+
+          <input
+            type="date"
+            id="date"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="service">Service</label>
+
+          <select id="service" required>
+
+            <option value="">Select a service</option>
+
+            <option value="General Consultation">
+              General Consultation
+            </option>
+
+            <option value="Laboratory Services">
+              Laboratory Services
+            </option>
+
+            <option value="Pharmacy">
+              Pharmacy
+            </option>
+
+            <option value="Emergency Care">
+              Emergency Care
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="message">Additional Information</label>
+
+          <textarea
+            id="message"
+            placeholder="Tell us anything important about your appointment request"
+          ></textarea>
+
+        </div>
+
+
+        <button type="submit" class="submit-btn">
+          📅 Send Appointment Request
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <h2>Contact DRWHITE UGBEDEOJO CLINIC</h2>
+
+    <p>
+      We are here to help. Contact the clinic directly.
+    </p>
+
+
+    <div class="contact-buttons">
+
+      <a
+        href="tel:+2348038109970"
+        class="btn white-btn"
+      >
+        📞 Call +234 803 810 9970
+      </a>
+
+
+      <a
+        href="https://wa.me/2348038109970"
+        class="btn whatsapp-btn"
+        target="_blank"
+        rel="noopener"
+      >
+        💬 WhatsApp Clinic
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      <strong>DRWHITE UGBEDEOJO CLINIC</strong>
+    </p>
+
+    <p>
+      Quality Healthcare You Can Trust
+    </p>
+
+    <p>
+      © 2026 DRWHITE UGBEDEOJO CLINIC. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+  <a
+    href="https://wa.me/2348038109970"
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp Clinic"
+  >
+    💬
+  </a>
+
+
+  <script>
+
+    function toggleMenu() {
+
+      const nav = document.getElementById("mainNav");
+
+      nav.classList.toggle("active");
+
+    }
+
+
+    function sendAppointment(event) {
+
+      event.preventDefault();
+
+      const name =
+        document.getElementById("name").value;
+
+      const phone =
+        document.getElementById("phone").value;
+
+      const date =
+        document.getElementById("date").value;
+
+      const service =
+        document.getElementById("service").value;
+
+      const message =
+        document.getElementById("message").value;
+
+
+      const whatsappMessage =
+        "Hello DRWHITE UGBEDEOJO CLINIC,%0A%0A" +
+        "I would like to book an appointment.%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Phone: " + encodeURIComponent(phone) + "%0A" +
+        "Preferred Date: " + encodeURIComponent(date) + "%0A" +
+        "Service: " + encodeURIComponent(service) + "%0A" +
+        "Additional Information: " +
+        encodeURIComponent(message);
+
+
+      const whatsappURL =
+        "https://wa.me/2348038109970?text=" +
+        whatsappMessage;
+
+
+      window.open(
+        whatsappURL,
+        "_blank"
+      );
+
+    }
+
+  </script>
+
+</body>
+</html>
