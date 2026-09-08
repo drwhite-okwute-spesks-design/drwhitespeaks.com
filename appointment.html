@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Appointment | DRWHITE UGBEDEOJO CLINIC</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5fbfb;
+    color:#183b3d;
+    line-height:1.6;
+}
+
+.topbar{
+    background:#073b3d;
+    color:white;
+    padding:9px 6%;
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+}
+
+.topbar a{
+    color:white;
+    text-decoration:none;
+}
+
+header{
+    background:white;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-icon{
+    width:48px;
+    height:48px;
+    background:#0b8f91;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+}
+
+.logo h2{
+    color:#073b3d;
+    font-size:20px;
+}
+
+.logo p{
+    color:#718486;
+    font-size:12px;
+}
+
+.menu-btn{
+    display:none;
+    background:#0b8f91;
+    color:white;
+    border:none;
+    padding:9px 14px;
+    border-radius:7px;
+    font-size:22px;
+    cursor:pointer;
+}
+
+nav{
+    background:#073b3d;
+    padding:13px 6%;
+    text-align:right;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:28px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#72d8d8;
+}
+
+/* HERO */
+
+.hero{
+    min-height:280px;
+    background:
+    linear-gradient(rgba(3,50,52,.80),rgba(3,50,52,.80)),
+    url("https://i.ibb.co/8gDMkSsb/IMG-20260826-WA0138.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:40px 6%;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+/* FORM */
+
+.container{
+    width:88%;
+    max-width:1050px;
+    margin:auto;
+}
+
+.section{
+    padding:65px 0;
+}
+
+.appointment-box{
+    background:white;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    color:#073b3d;
+    font-size:30px;
+}
+
+.section-title p{
+    color:#647879;
+    margin-top:7px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group.full{
+    grid-column:1 / -1;
+}
+
+label{
+    font-weight:bold;
+    margin-bottom:7px;
+    color:#294f51;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid #cbdede;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+    background:white;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#0b8f91;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.submit-btn{
+    margin-top:25px;
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    background:#0b8f91;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#087779;
+}
+
+.note{
+    margin-top:25px;
+    padding:16px;
+    background:#eaf7f7;
+    border-left:4px solid #0b8f91;
+    border-radius:7px;
+    color:#486365;
+}
+
+/* CTA */
+
+.cta{
+    background:#073b3d;
+    color:white;
+    text-align:center;
+    padding:55px 20px;
+}
+
+.cta h2{
+    color:white;
+    margin-bottom:10px;
+}
+
+.cta p{
+    color:#d6eeee;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:7px;
+    text-decoration:none;
+    margin:5px;
+    font-weight:bold;
+}
+
+.btn-primary{
+    background:#0b8f91;
+    color:white;
+}
+
+.btn-light{
+    background:white;
+    color:#073b3d;
+}
+
+/* FOOTER */
+
+footer{
+    background:#042c2e;
+    color:#c8dddd;
+    padding:35px 6%;
+    text-align:center;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:8px;
+}
+
+footer p{
+    font-size:13px;
+    margin:5px;
+}
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#25d366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:27px;
+    box-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .topbar{
+        flex-direction:column;
+        gap:5px;
+        text-align:center;
+    }
+
+    header{
+        padding:15px 5%;
+    }
+
+    .logo h2{
+        font-size:15px;
+    }
+
+    .logo p{
+        font-size:10px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        padding:10px 5%;
+        text-align:left;
+    }
+
+    nav.show{
+        display:block;
+    }
+
+    nav a{
+        display:block;
+        margin:0;
+        padding:13px;
+        border-bottom:1px solid rgba(255,255,255,.2);
+    }
+
+    .hero{
+        min-height:240px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .section{
+        padding:45px 0;
+    }
+
+    .appointment-box{
+        padding:25px 18px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+
+    <span>Quality Healthcare You Can Trust</span>
+
+    <a href="tel:+2348038109970">
+        📞 +234 803 810 9970
+    </a>
+
+</div>
+
+
+<header>
+
+    <div class="logo">
+
+        <div class="logo-icon">⚕</div>
+
+        <div>
+            <h2>DRWHITE UGBEDEOJO CLINIC</h2>
+            <p>Professional Healthcare Services</p>
+        </div>
+
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</header>
+
+
+<nav id="mobileNav">
+
+    <a href="index.html">Home</a>
+
+    <a href="services.html">Services</a>
+
+    <a href="about.html">About Us</a>
+
+    <a href="appointment.html">Appointment</a>
+
+    <a href="contact.html">Contact</a>
+
+</nav>
+
+
+<section class="hero">
+
+    <div>
+
+        <h1>Book An Appointment</h1>
+
+        <p>
+            Schedule your visit with DRWHITE UGBEDEOJO CLINIC.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+    <div class="section-title">
+
+        <h2>Appointment Request</h2>
+
+        <p>
+            Complete the form below and your request will be
+            sent directly to the clinic via WhatsApp.
+        </p>
+
+    </div>
+
+
+    <div class="appointment-box">
+
+        <form id="appointmentForm">
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email address">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="gender">
+                        Gender
+                    </label>
+
+                    <select id="gender">
+
+                        <option value="">
+                            Select gender
+                        </option>
+
+                        <option>Male</option>
+
+                        <option>Female</option>
+
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="service">
+                        Service Required
+                    </label>
+
+                    <select id="service" required>
+
+                        <option value="">
+                            Select a service
+                        </option>
+
+                        <option>
+                            General Consultation
+                        </option>
+
+                        <option>
+                            Laboratory Services
+                        </option>
+
+                        <option>
+                            Pharmacy Services
+                        </option>
+
+                        <option>
+                            Emergency Care
+                        </option>
+
+                        <option>
+                            Maternal Care
+                        </option>
+
+                        <option>
+                            Health Checkup
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="date">
+                        Preferred Date
+                    </label>
+
+                    <input
+                    type="date"
+                    id="date"
+                    required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="time">
+                        Preferred Time
+                    </label>
+
+                    <input
+                    type="time"
+                    id="time"
+                    required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="reason">
+                        Reason For Visit
+                    </label>
+
+                    <textarea
+                    id="reason"
+                    placeholder="Briefly describe the reason for your visit"
+                    required></textarea>
+
+                </div>
+
+            </div>
+
+
+            <button
+            type="submit"
+            class="submit-btn">
+
+                📅 Send Appointment Request
+
+            </button>
+
+
+            <div class="note">
+
+                <strong>Important:</strong>
+
+                For urgent or emergency medical situations,
+                please call the clinic directly instead of
+                waiting for an appointment response.
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<section class="cta">
+
+    <h2>Need Assistance?</h2>
+
+    <p>
+        You can call or message the clinic directly.
+    </p>
+
+    <a
+    href="tel:+2348038109970"
+    class="btn btn-light">
+
+        📞 Call The Clinic
+
+    </a>
+
+    <a
+    href="https://wa.me/2348038109970"
+    class="btn btn-primary"
+    target="_blank">
+
+        💬 WhatsApp Us
+
+    </a>
+
+</section>
+
+
+<footer>
+
+    <h3>DRWHITE UGBEDEOJO CLINIC</h3>
+
+    <p>Professional Healthcare Services</p>
+
+    <p>📞 +234 803 810 9970</p>
+
+    <p>
+        © 2026 DRWHITE UGBEDEOJO CLINIC.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<a
+href="https://wa.me/2348038109970"
+class="whatsapp"
+target="_blank">
+
+    💬
+
+</a>
+
+
+<script>
+
+function toggleMenu(){
+
+    const nav =
+        document.getElementById("mobileNav");
+
+    nav.classList.toggle("show");
+
+}
+
+
+document
+.getElementById("appointmentForm")
+.addEventListener("submit",function(event){
+
+    event.preventDefault();
+
+
+    const name =
+        document.getElementById("name").value;
+
+    const phone =
+        document.getElementById("phone").value;
+
+    const email =
+        document.getElementById("email").value;
+
+    const gender =
+        document.getElementById("gender").value;
+
+    const service =
+        document.getElementById("service").value;
+
+    const date =
+        document.getElementById("date").value;
+
+    const time =
+        document.getElementById("time").value;
+
+    const reason =
+        document.getElementById("reason").value;
+
+
+    const message =
+
+        "🏥 DRWHITE UGBEDEOJO CLINIC\n\n" +
+
+        "NEW APPOINTMENT REQUEST\n\n" +
+
+        "Patient Name: " + name + "\n" +
+
+        "Phone: " + phone + "\n" +
+
+        "Email: " + email + "\n" +
+
+        "Gender: " + gender + "\n" +
+
+        "Service: " + service + "\n" +
+
+        "Preferred Date: " + date + "\n" +
+
+        "Preferred Time: " + time + "\n" +
+
+        "Reason For Visit: " + reason;
+
+
+    const whatsappURL =
+
+        "https://wa.me/2348038109970?text=" +
+
+        encodeURIComponent(message);
+
+
+    window.location.href = whatsappURL;
+
+});
+
+</script>
+
+</body>
+</html>
